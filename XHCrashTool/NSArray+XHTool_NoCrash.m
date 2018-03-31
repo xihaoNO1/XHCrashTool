@@ -32,11 +32,12 @@
 - (id)XHObjectAtIndexedSubscript:(NSUInteger)idx{
     //判断是否越界
     if (idx >= self.count ) {
-        if (self.count > 0) {
-            id objfirst = [self XHObjectAtIndexedSubscript:0];
-            return [[[objfirst class] alloc] init];
-        }
-        return @"";  
+//        if (self.count > 0) {
+//            id objfirst = [self XHObjectAtIndexedSubscript:0];
+//            return [[[objfirst class] alloc] init];
+//        }
+//        return @"";
+        return nil; //对所有方法执行
     }else{
        return  [self XHObjectAtIndexedSubscript:idx];
     }
