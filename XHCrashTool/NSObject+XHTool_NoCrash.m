@@ -23,15 +23,11 @@ static ForwardingTarget *_target = nil;
 }
 
 + (BOOL)isWhiteListClass:(Class)class {
-//    NSString *classString = NSStringFromClass(class);
-//    BOOL isInternal = [classString hasPrefix:@"_"];
-//    if (isInternal) {
-//        return NO;
-//    }
-//    BOOL isNull =  [classString isEqualToString:NSStringFromClass([NSNull class])];
-//
-//    BOOL isMyClass  = YES;
-//    return isNull || isMyClass;
+    NSString *classString = NSStringFromClass(class);
+    BOOL isInternal = [classString hasPrefix:@"_"];
+    if (isInternal) {
+        return NO;
+    }
     return YES;
 }
 
